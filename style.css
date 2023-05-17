@@ -23,6 +23,7 @@
     justify-content: center;
     gap: 25px;
     padding: 15px;
+    border-radius: 20px;
   }
   
   /* designing the search area */

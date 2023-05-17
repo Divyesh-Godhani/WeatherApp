@@ -12,6 +12,11 @@ const windSpeed = document.getElementById("windSpeed");
 const temprature = document.getElementById("temprature");
 const logoImage = document.getElementById("logoImage");
 const weatherStatus = document.getElementById("weatherStatus");
+const date = document.getElementById("date");
+const sunrise = document.getElementById("sunrise");
+const sunset = document.getElementById("sunset");
+const moonrise = document.getElementById("moonrise");
+const moonset = document.getElementById("moonset");
 
 const getData = async (event) => {
     event.preventDefault();
@@ -25,12 +30,12 @@ const getData = async (event) => {
      // Fetch Details
 
      const fetchData = await fetch(
-        `https://api.weatherapi.com/v1/current.json?key=370b459af275478ebb055128231705&q=${city}`
+        `https://api.weatherapi.com/v1/forecast.json?key=370b459af275478ebb055128231705&q=${city}`
      )
 
      const orgData = await fetchData.json();
      data = orgData;
-    //  console.log(data);
+     console.log(data.forecast.forecastday[0].astro.sunrise);
 
       // Displaying the data in HTML
 
@@ -42,6 +47,10 @@ const getData = async (event) => {
       temprature.innerHTML  = data.current.temp_c;
       logoImage.src         = data.current.condition.icon;
       weatherStatus.innerHTML = data.current.condition.text;
-
+      date.innerHTML          = data.forecast.forecastday[0].date;
+      sunrise.innerHTML       = data.forecast.forecastday[0].astro.sunrise;
+      sunset.innerHTML        = data.forecast.forecastday[0].astro.sunset;
+      moonrise.innerHTML       = data.forecast.forecastday[0].astro.moonrise;
+      moonset.innerHTML        = data.forecast.forecastday[0].astro.moonset;
 
 }
