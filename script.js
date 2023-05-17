@@ -35,7 +35,7 @@ const getData = async (event) => {
 
      const orgData = await fetchData.json();
      data = orgData;
-     console.log(data.forecast.forecastday[0].astro.sunrise);
+    //  console.log(data.forecast.forecastday[0].astro.sunrise);
 
       // Displaying the data in HTML
 
@@ -54,3 +54,5 @@ const getData = async (event) => {
       moonset.innerHTML        = data.forecast.forecastday[0].astro.moonset;
 
 }
+let a = new date(); 
+console.log(a);
