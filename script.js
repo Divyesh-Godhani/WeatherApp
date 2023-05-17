@@ -54,5 +54,3 @@ const getData = async (event) => {
       moonset.innerHTML        = data.forecast.forecastday[0].astro.moonset;
 
 }
-let a = new date(); 
-console.log(a);
