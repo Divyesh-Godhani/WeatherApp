@@ -30,7 +30,7 @@ const getData = async (event) => {
 
      const orgData = await fetchData.json();
      data = orgData;
-     console.log(data);
+    //  console.log(data);
 
       // Displaying the data in HTML
 
