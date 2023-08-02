@@ -33,19 +33,21 @@
   
   /* designing the search area */
   .searchData {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     border-radius: 5px;
   }
   
   .searchData input {
     border: transparent;
-    padding: 5px;
+    padding: 10px;
+    border-radius: 20px;
   }
   
   .searchData button {
     border: transparent;
-    padding: 10px 20px;
+    padding: 12px 20px;
     cursor: pointer;
+    border-radius: 20px;
   }
   
   /* designing the city weather data */
@@ -70,4 +72,5 @@
     gap: 5px;
     padding: 5px;
   }
+
   
